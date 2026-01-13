@@ -14,9 +14,6 @@ node create(int data){
     node newnode;
     newnode=(node)malloc(sizeof(struct bst));
     
-    printf("Enter the value\n");
-    scanf("%d",&newnode->data);
-
     newnode->data=data;
     newnode->left=NULL;
     newnode->right=NULL;
@@ -66,7 +63,7 @@ void postorder(node root){
 
 //search
 node search(node root,int key){
-       if(root!=NULL){
+       if(root==NULL){
         printf("\nElement not found");
         return NULL;
        }
